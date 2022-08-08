@@ -12,6 +12,15 @@
 
 body {
     font-size: 14pt;
+
+    hr {
+        margin: 0 auto;
+        width: 80%;
+
+        @media screen and (max-width: 767px) {
+            opacity: 0;
+        }
+    }
 }
 
 nav {
@@ -19,14 +28,44 @@ nav {
     flex-wrap: wrap;
     align-items: center;
 
-    .logo {
+    @media screen and (min-width: 1324px) {
+        margin-left: 5em;
+    }
+
+    .logo {        
         flex: 50%;
+
+        @media screen and (min-width: 768px) {
+            flex: none;
+            margin: 0 0 0 2em;            
+        }
 
         img {
             height: auto;
             max-width: 20%;
-
             margin: 0.5em 0.2em;
+
+            @media screen and (min-width: 768px) {
+                max-width: 60%;
+            }
+        }        
+    }
+
+    .nav-items {
+        overflow: hidden;
+
+        a {            
+            text-decoration: none;
+            padding: 0 10pt;
+
+            &:hover {
+                color: rgb(161, 39, 39);
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            display: none;
+            opacity: 0;
         }
     }
 
@@ -64,12 +103,58 @@ nav {
         &.is-active .bar {
             opacity: 0;
         }
+
+        @media only screen and (min-width: 768px) {
+            display: none;
+            opacity: 0;
+        }
     }
 }
+
+.mobile-nav {
+    position: fixed;
+    top: 1;
+    left: 100%;
+    width: 100%;    
+    min-height: 100vh;
+    display: block; 
+    z-index: 98;
+    background-color: rgb(33, 33, 33);
+    padding-top: 4.5em;
+
+    transition: 0.4s;
+
+    a {        
+        display: block;
+        width: 65%;
+        margin: 0 auto 1em;
+        text-align: center;
+        padding: 10pt 0pt;
+        background-color: rgb(141, 39, 39);  
+        text-decoration: none;
+
+        &:hover {
+            background-color: rgb(148, 24, 24); 
+        }
+    }
+
+    &.is-active {
+        left: 0;
+    }  
+    
+    @media only screen and (min-width: 768px) {
+        display: none;
+        opacity: 0;
+    }
+} 
 
 section {
     margin-top: 2em;
     
+    @media screen and (min-width: 768px) {
+        margin-top: 5em;
+    }
+
     div {
         display: flex;
         justify-content: center;
@@ -79,10 +164,18 @@ section {
 
     .title {
         font-size: 15pt;
+
+        @media screen and (min-width: 768px) {
+            font-size: 28pt; 
+        }
     }
 
     .subtitle {
         font-size: 12.5pt;
+
+        @media screen and (min-width: 768px) {
+            font-size: 18pt; 
+        }
     }
 
     .ticket-btn {
@@ -91,5 +184,9 @@ section {
         margin-top: 4em;
         padding: 10pt;
         font-size: 11pt;
+
+        @media screen and (min-width: 768px) {
+            font-size: 18pt; 
+        }
     }
 }

@@ -10,19 +10,60 @@
 body {
   font-size: 14pt;
 }
+body hr {
+  margin: 0 auto;
+  width: 80%;
+}
+@media screen and (max-width: 767px) {
+  body hr {
+    opacity: 0;
+  }
+}
 
 nav {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
+@media screen and (min-width: 1324px) {
+  nav {
+    margin-left: 5em;
+  }
+}
 nav .logo {
   flex: 50%;
+}
+@media screen and (min-width: 768px) {
+  nav .logo {
+    flex: none;
+    margin: 0 0 0 2em;
+  }
 }
 nav .logo img {
   height: auto;
   max-width: 20%;
   margin: 0.5em 0.2em;
+}
+@media screen and (min-width: 768px) {
+  nav .logo img {
+    max-width: 60%;
+  }
+}
+nav .nav-items {
+  overflow: hidden;
+}
+nav .nav-items a {
+  text-decoration: none;
+  padding: 0 10pt;
+}
+nav .nav-items a:hover {
+  color: rgb(161, 39, 39);
+}
+@media screen and (max-width: 767px) {
+  nav .nav-items {
+    display: none;
+    opacity: 0;
+  }
 }
 nav .burger {
   margin-right: 1em;
@@ -53,9 +94,54 @@ nav .burger.is-active::after {
 nav .burger.is-active .bar {
   opacity: 0;
 }
+@media only screen and (min-width: 768px) {
+  nav .burger {
+    display: none;
+    opacity: 0;
+  }
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 1;
+  left: 100%;
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+  z-index: 98;
+  background-color: rgb(33, 33, 33);
+  padding-top: 4.5em;
+  transition: 0.4s;
+}
+.mobile-nav a {
+  display: block;
+  width: 65%;
+  margin: 0 auto 1em;
+  text-align: center;
+  padding: 10pt 0pt;
+  background-color: rgb(141, 39, 39);
+  text-decoration: none;
+}
+.mobile-nav a:hover {
+  background-color: rgb(148, 24, 24);
+}
+.mobile-nav.is-active {
+  left: 0;
+}
+@media only screen and (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+    opacity: 0;
+  }
+}
 
 section {
   margin-top: 2em;
+}
+@media screen and (min-width: 768px) {
+  section {
+    margin-top: 5em;
+  }
 }
 section div {
   display: flex;
@@ -65,8 +151,18 @@ section div {
 section .title {
   font-size: 15pt;
 }
+@media screen and (min-width: 768px) {
+  section .title {
+    font-size: 28pt;
+  }
+}
 section .subtitle {
   font-size: 12.5pt;
+}
+@media screen and (min-width: 768px) {
+  section .subtitle {
+    font-size: 18pt;
+  }
 }
 section .ticket-btn {
   display: flex;
@@ -74,4 +170,9 @@ section .ticket-btn {
   margin-top: 4em;
   padding: 10pt;
   font-size: 11pt;
+}
+@media screen and (min-width: 768px) {
+  section .ticket-btn {
+    font-size: 18pt;
+  }
 }/*# sourceMappingURL=style.css.map */
