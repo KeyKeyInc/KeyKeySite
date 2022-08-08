@@ -1,68 +1,68 @@
 
 @keyframes pulse {
-    0% {
-      transform: scale(0);
-      opacity: 0;
-    }
-    33% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(3);
-      opacity: 0;
-    }
-  }
-  .button {
-    display: inline-flex;
-    align-items: center;
-    background: rgb(160,28,32);
-    box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    height: 45px;
-    padding: 0 30px;
-    color: #fff;
-    font-family: Lato, Arial, sans-serif;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
-    will-change: transform;
-
-    overflow: hidden;
-  }
-  .button:hover {
-    background: rgb(196,36,52);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.2);
-    transform: translate3d(0, -2px, 0);
-  }
-  .button:active {
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-    transform: translate3d(0, 1px, 0);
-  }
-  
-  .pulse {
-    position: relative;
-  }
-  .pulse:before, .pulse:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
+  0% {
+    transform: scale(0);
     opacity: 0;
-    margin: auto;
   }
-  .pulse:before {
-    animation: pulse 1.5s infinite linear;
+  33% {
+    transform: scale(1);
+    opacity: 1;
   }
-  .pulse:after {
-    animation: pulse 2s 0.4s infinite linear;
+  100% {
+    transform: scale(3);
+    opacity: 0;
   }
-  .pulse:hover:before, .pulse:hover:after {
-    display: none;
-  }
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  background: rgb(160,28,32);
+  box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  height: 45px;
+  padding: 0 30px;
+  color: #fff;
+  font-family: Lato, Arial, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  will-change: transform;
+
+  overflow: hidden;
+}
+.button:hover {
+  background: rgb(196,36,52);
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.2);
+  transform: translate3d(0, -2px, 0);
+}
+.button:active {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+  transform: translate3d(0, 1px, 0);
+}
+
+.pulse {
+  position: relative;
+}
+.pulse:before, .pulse:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  margin: auto;
+}
+.pulse:before {
+  animation: pulse 1.5s infinite linear;
+}
+.pulse:after {
+  animation: pulse 2s 0.4s infinite linear;
+}
+.pulse:hover:before, .pulse:hover:after {
+  display: none;
+}
