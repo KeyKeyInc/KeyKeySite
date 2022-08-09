@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -93,7 +92,7 @@ body {
   overflow: hidden;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
-  padding: 1em 4em;
+  padding: 1.2em 0.2em;
   cursor: pointer;
   transition: all 0.1s linear;
   text-align: center;
@@ -107,13 +106,19 @@ body {
 .ticket-form form .pricing .column.selected {
   box-shadow: 0 0 0 2px rgb(176, 33, 33);
 }
-.ticket-form form .pricing .column .check  {
-  background: rgb(176, 33, 33);
+.ticket-form form .pricing .column .info {
   opacity: 0.5;
   transition: all 0.1s 0.1s linear;
 }
-.ticket-form form .pricing .column .check .selected {
+.ticket-form form .pricing .column .info.selected {
   opacity: 1;
+}
+.ticket-form form .pricing .column .info .features {
+  margin: 2em 0 0.5em 0;
+}
+.ticket-form form .pricing .column .info .features h5 {
+  padding: 0.2em 0em 0.2em 0;
+  text-align: left;
 }
 .ticket-form form .pricing .column .select-btn {
   margin-top: 1em;
@@ -121,6 +126,9 @@ body {
   background-color: transparent;
   border: 1px solid #b7b7b7;
   border-radius: 2px;
+}
+.ticket-form form .pricing .column .select-btn:hover {
+  border: 1px solid rgb(176, 36, 36);
 }
 .ticket-form form .action button {
   margin-top: 3em;

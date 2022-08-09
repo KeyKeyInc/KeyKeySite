@@ -106,7 +106,7 @@ body {
                 overflow: hidden;
                 box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
                 border-radius: 2px;
-                padding: 1em 4em;
+                padding: 1.2em 0.2em;
                 cursor: pointer;
                 transition: all 0.1s linear;
                 text-align: center;               
@@ -123,14 +123,21 @@ body {
                 box-shadow: 0 0 0 2px rgb(176, 33, 33); 
                 }
 
-                .check {
-                    background:rgb(176, 33, 33);
+                .info {                    
                     opacity: 0.5;
                     transition: all 0.1s 0.1s linear;
                     
                     &.selected {
                       opacity: 1;
                     }
+                    
+                    .features {
+                        margin: 2em 0 0.5em 0;
+                        h5 {
+                            padding: 0.2em 0em 0.2em 0;
+                            text-align: left;
+                        }
+                    }                    
                 }
 
                 .select-btn {
@@ -139,6 +146,10 @@ body {
                     background-color: transparent;
                     border: 1px solid #b7b7b7;
                     border-radius: 2px;
+
+                    &:hover {
+                        border: 1px solid rgb(176, 36, 36);
+                    }
                 }
             }
         }
