@@ -14,37 +14,46 @@ body {
     height: 100vh;
 }
 
-.logo {
+.logo, a {
     display: flex;
     justify-content: center;
 
     img {
-        margin-top: 1em;
+        margin-top: 2em;
         margin-bottom: 1em;
         height: auto;
-        max-width: 45%;
-    }
+        max-width: 50%;
+
+        @media screen and (min-width: 768px) {
+            max-width: 60%;
+        }
+    }    
 }
 
 .ticket-form {
     background-color: rgb(33, 33, 33);
 
     form {
-        width: 75vw;
+        width: 85vw;
         margin: 10vh auto 15vh auto;
         display: flex;
         flex-direction: column;
         border-radius: 4px;
-        box-shadow: 0 2px 25px rgba(0,0,0,0.2); 
+        box-shadow: 0px 2px 15px rgba(0,0,0,0.2); 
+
+        @media screen and (min-width: 768px) {
+            width: 50vw;
+        }
         
         h1 {
-            font-size: 14pt;
+            font-size: 16pt;
             padding: 0.9em 0.9em 0 0.9em;
             font-weight: 300;
         }
     
         .content {
             margin-bottom: 1.5em;
+            margin-left: 0.5em;
             padding: 1em;
             text-align: center;
     
@@ -53,7 +62,7 @@ body {
                 flex-direction: row;
 
                 input {
-                    font-size: 10pt;
+                    font-size: 14.5pt;
                     display: block;
                     padding: 0.2em 0.1em;
                     border: 0;
@@ -89,15 +98,14 @@ body {
             button {
                 width: 100%;
                 border: none;
-                padding: 1.3em;
-                font-family: 'Rubik', sans-serif;
+                padding: 0.8em;
                 cursor: pointer;
-                text-transform: uppercase;
                 background: #e8e9ec;
                 color: rgb(176, 36, 36);
                 border-bottom-left-radius: 4px;
                 border-bottom-right-radius: 0;
                 letter-spacing: 0.2px;
+                font-size: 14pt;
                 outline: 0;
                 transition: all .3s;
 
@@ -115,6 +123,11 @@ body {
 
                 &:nth-child(2):hover {
                     background: #6d3c3c;
+                }
+
+                @media screen and (min-width: 768px) {
+                    padding: 1em;
+                    font-size: 14pt;
                 }
             }
         }
