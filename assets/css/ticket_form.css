@@ -26,6 +26,11 @@ body {
     max-width: 60%;
   }
 }
+@media screen and (min-width: 1024px) {
+  .logo img, a img {
+    max-width: 80%;
+  }
+}
 
 .ticket-form {
   background-color: rgb(33, 33, 33);
@@ -48,11 +53,23 @@ body {
   padding: 0.9em 0.9em 0 0.9em;
   font-weight: 300;
 }
+@media screen and (min-width: 1024px) {
+  .ticket-form form h1 {
+    margin-left: 3em;
+    font-size: 20pt;
+  }
+}
 .ticket-form form .content {
   margin-bottom: 0.7em;
   margin-left: 0.5em;
   padding: 1em;
   text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .ticket-form form .content {
+    margin-bottom: 1.7em;
+    margin-left: 5em;
+  }
 }
 .ticket-form form .content .input-field {
   padding: 0.3em 0.2em;
@@ -84,11 +101,17 @@ body {
   margin: 1em auto;
   width: 80%;
 }
+@media screen and (min-width: 1624px) {
+  .ticket-form form .pricing {
+    width: 90%;
+    display: flex;
+  }
+}
 .ticket-form form .pricing .column {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 1em;
+  margin: 1em 0.1em;
   overflow: hidden;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
@@ -96,6 +119,17 @@ body {
   cursor: pointer;
   transition: all 0.1s linear;
   text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .ticket-form form .pricing .column {
+    max-width: 60%;
+    margin: 1em auto;
+  }
+}
+@media screen and (min-width: 1824px) {
+  .ticket-form form .pricing .column {
+    padding: 1.2em 1.5em;
+  }
 }
 .ticket-form form .pricing .column:hover {
   box-shadow: 0 0 0 1px color(rgb(176, 33, 33) a(64%));

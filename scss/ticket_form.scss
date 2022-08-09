@@ -27,6 +27,9 @@ body {
         @media screen and (min-width: 768px) {
             max-width: 60%;
         }
+        @media screen and (min-width: 1024px) {
+            max-width: 80%;
+        }
     }    
 }
 
@@ -49,6 +52,11 @@ body {
             font-size: 16pt;
             padding: 0.9em 0.9em 0 0.9em;
             font-weight: 300;
+
+            @media screen and (min-width: 1024px) {
+                margin-left: 3em;
+                font-size: 20pt;
+            }
         }
     
         .content {
@@ -56,6 +64,11 @@ body {
             margin-left: 0.5em;
             padding: 1em;
             text-align: center;
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: 1.7em;
+                margin-left: 5em; 
+            }
     
             .input-field {
                 padding: 0.3em 0.2em;
@@ -98,35 +111,49 @@ body {
             margin: 1em auto;
             width: 80%;
 
+            @media screen and (min-width: 1624px) {
+                width: 90%;
+                display: flex;
+            }
+
             .column {
                 display:flex;
                 align-items: center;
                 flex-direction: column;
-                margin: 1em;
+                margin: 1em 0.1em;
                 overflow: hidden;
                 box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
                 border-radius: 2px;
                 padding: 1.2em 0.2em;
                 cursor: pointer;
                 transition: all 0.1s linear;
-                text-align: center;               
+                text-align: center;    
+                
+                @media screen and (min-width: 1024px) {
+                    max-width: 60%;
+                    margin: 1em auto;
+                }
+
+                @media screen and (min-width: 1824px) {
+                    padding: 1.2em 1.5em;
+                }
                   
                 &:hover {
                     box-shadow: 0 0 0 1px color(rgb(176, 33, 33) a(64%));
                 }
                   
                 &:active {
-                box-shadow: 0 0 0 1px rgb(176, 33, 33);
+                    box-shadow: 0 0 0 1px rgb(176, 33, 33);
                 }
                   
                 &.selected {
-                box-shadow: 0 0 0 2px rgb(176, 33, 33); 
+                    box-shadow: 0 0 0 2px rgb(176, 33, 33); 
                 }
 
                 .info {                    
                     opacity: 0.5;
                     transition: all 0.1s 0.1s linear;
-                    
+
                     &.selected {
                       opacity: 1;
                     }
