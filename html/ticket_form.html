@@ -1,44 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ticket Prenotation</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ticket Prenotation</title>
 
-  <link rel="stylesheet" href="../assets/css/ticket_form.css">
+	<link rel="stylesheet" href="../assets/css/ticket_form.css">
 </head>
-<body>  
-  <section class="ticket-form">
-    <form>
-      <div class="logo">
-        <a href="../index.html" target="_self">
-          <img src="../assets/imgs/logo.png" alt="">
-        </a>
-      </div>
 
-      <h1>Ticket creation form</h1>
+<body>
+	<section class="ticket-form">
+		<form>
+			<div class="logo">
+				<a href="../index.html" target="_self">
+					<img src="../assets/imgs/logo.png" alt="">
+				</a>
+			</div>
 
-      <div class="content">
-        <div class="input-field name">
-          <input type="name" placeholder="Name" required autocomplete="nope">
-        </div>
-        <div class="input-field class">
-          <input type="class" placeholder="Class" required autocomplete="nope">
-        </div>
-        <div class="input-field section">
-          <input type="section" placeholder="Section" required autocomplete="nope">
-        </div>
-      </div>
+			<h1>Ticket creation form</h1>
 
-      <div class="action">
-        <button>SUBMIT ORDER</button>
-      </div>
+			<div class="content">
+				<div class="input-field name">
+					<input type="name" placeholder="Name" required autocomplete="nope">
+				</div>
+				<div class="input-field class">
+					<input type="class" placeholder="Class" required autocomplete="nope">
+				</div>
+				<div class="input-field section">
+					<input type="section" placeholder="Section" required autocomplete="nope">
+				</div>
+			</div>
 
-    </form>
-  </section>
+			<h1>Choose a plan </h1>
 
-  <!-- My js scripts-->
-  <script type="text/javascript" src="../js/main.js"></script>
+			<div class="pricing">
+				<div class="column">
+					<div class="check">
+						<h4>2 Euro</h3>
+					</div>
+					<button class="select-btn">Select</button>
+				</div>
+				<div class="column">
+					<div class="check">
+						<h4>5 Euro</h3>
+					</div>
+					<button class="select-btn">Select</button>
+				</div>
+				<div class="column">
+					<div class="check">
+						<h4>9 Euro</h3>
+					</div>
+					<button class="select-btn">Select</button>
+				</div>
+			</div>
+
+			<div class="action">
+				<button>SUBMIT ORDER</button>
+			</div>
+
+		</form>
+	</section>
+
+	<!-- My js scripts-->
+	<script type="text/javascript" src="../js/ticket_form.js"></script>
 </body>
+
 </html>

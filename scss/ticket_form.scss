@@ -52,7 +52,7 @@ body {
         }
     
         .content {
-            margin-bottom: 1.5em;
+            margin-bottom: 0.7em;
             margin-left: 0.5em;
             padding: 1em;
             text-align: center;
@@ -94,8 +94,58 @@ body {
             }
         }
 
+        .pricing {
+            margin: 1em auto;
+            width: 80%;
+
+            .column {
+                display:flex;
+                align-items: center;
+                flex-direction: column;
+                margin: 1em;
+                overflow: hidden;
+                box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
+                border-radius: 2px;
+                padding: 1em 4em;
+                cursor: pointer;
+                transition: all 0.1s linear;
+                text-align: center;               
+                  
+                &:hover {
+                    box-shadow: 0 0 0 1px color(rgb(176, 33, 33) a(64%));
+                }
+                  
+                &:active {
+                box-shadow: 0 0 0 1px rgb(176, 33, 33);
+                }
+                  
+                &.selected {
+                box-shadow: 0 0 0 2px rgb(176, 33, 33); 
+                }
+
+                .check {
+                    background:rgb(176, 33, 33);
+                    opacity: 0.5;
+                    transition: all 0.1s 0.1s linear;
+                    
+                    &.selected {
+                      opacity: 1;
+                    }
+                }
+
+                .select-btn {
+                    margin-top: 1em;
+                    padding: 4pt 10pt;
+                    background-color: transparent;
+                    border: 1px solid #b7b7b7;
+                    border-radius: 2px;
+                }
+            }
+        }
+
         .action {
             button {
+                margin-top: 3em;
                 width: 100%;
                 border: none;
                 padding: 0.8em;

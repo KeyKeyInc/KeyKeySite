@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -49,7 +50,7 @@ body {
   font-weight: 300;
 }
 .ticket-form form .content {
-  margin-bottom: 1.5em;
+  margin-bottom: 0.7em;
   margin-left: 0.5em;
   padding: 1em;
   text-align: center;
@@ -80,7 +81,49 @@ body {
 .ticket-form form .content .input-field.section input {
   width: 30%;
 }
+.ticket-form form .pricing {
+  margin: 1em auto;
+  width: 80%;
+}
+.ticket-form form .pricing .column {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 1em;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  padding: 1em 4em;
+  cursor: pointer;
+  transition: all 0.1s linear;
+  text-align: center;
+}
+.ticket-form form .pricing .column:hover {
+  box-shadow: 0 0 0 1px color(rgb(176, 33, 33) a(64%));
+}
+.ticket-form form .pricing .column:active {
+  box-shadow: 0 0 0 1px rgb(176, 33, 33);
+}
+.ticket-form form .pricing .column.selected {
+  box-shadow: 0 0 0 2px rgb(176, 33, 33);
+}
+.ticket-form form .pricing .column .check  {
+  background: rgb(176, 33, 33);
+  opacity: 0.5;
+  transition: all 0.1s 0.1s linear;
+}
+.ticket-form form .pricing .column .check .selected {
+  opacity: 1;
+}
+.ticket-form form .pricing .column .select-btn {
+  margin-top: 1em;
+  padding: 4pt 10pt;
+  background-color: transparent;
+  border: 1px solid #b7b7b7;
+  border-radius: 2px;
+}
 .ticket-form form .action button {
+  margin-top: 3em;
   width: 100%;
   border: none;
   padding: 0.8em;
