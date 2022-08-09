@@ -41,7 +41,7 @@ nav .logo {
 }
 nav .logo img {
   height: auto;
-  max-width: 20%;
+  max-width: 15%;
   margin: 0.5em 0.2em;
 }
 @media screen and (min-width: 768px) {
@@ -71,7 +71,9 @@ nav .burger {
   display: block;
   width: 23pt;
   cursor: pointer;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: none;
   outline: none;
   border: none;
