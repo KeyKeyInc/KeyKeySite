@@ -32,10 +32,10 @@ body {
   }
 }
 
-.ticket-form {
+section {
   background-color: rgb(33, 33, 33);
 }
-.ticket-form form {
+section form {
   width: 85vw;
   margin: 10vh auto 15vh auto;
   display: flex;
@@ -44,70 +44,32 @@ body {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
 }
 @media screen and (min-width: 768px) {
-  .ticket-form form {
+  section form {
     width: 50vw;
   }
 }
-.ticket-form form h1 {
+section form h1 {
   font-size: 16pt;
   padding: 0.9em 0.9em 0 0.9em;
   font-weight: 300;
 }
 @media screen and (min-width: 1024px) {
-  .ticket-form form h1 {
+  section form h1 {
     margin-left: 3em;
     font-size: 20pt;
   }
 }
-.ticket-form form .content {
-  margin-bottom: 0.7em;
-  margin-left: 0.5em;
-  padding: 1em;
-  text-align: center;
-}
-@media screen and (min-width: 1024px) {
-  .ticket-form form .content {
-    margin-bottom: 1.7em;
-    margin-left: 5em;
-  }
-}
-.ticket-form form .content .input-field {
-  padding: 0.3em 0.2em;
-  flex-direction: row;
-}
-.ticket-form form .content .input-field input {
-  font-size: 14.5pt;
-  display: block;
-  padding: 0.2em 0.1em;
-  border: 0;
-  border-bottom: 0.5pt solid #747474;
-  outline: none;
-  transition: all 0.2s;
-  background-color: rgb(33, 33, 33);
-}
-.ticket-form form .content .input-field input:focus {
-  border-color: #222;
-}
-.ticket-form form .content .input-field.name input {
-  width: 70%;
-}
-.ticket-form form .content .input-field.class input {
-  width: 30%;
-}
-.ticket-form form .content .input-field.section input {
-  width: 30%;
-}
-.ticket-form form .pricing {
+section form .pricing {
   margin: 1em auto;
   width: 80%;
 }
 @media screen and (min-width: 1624px) {
-  .ticket-form form .pricing {
+  section form .pricing {
     width: 90%;
     display: flex;
   }
 }
-.ticket-form form .pricing .column {
+section form .pricing .column {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -121,50 +83,50 @@ body {
   text-align: center;
 }
 @media screen and (min-width: 1024px) {
-  .ticket-form form .pricing .column {
+  section form .pricing .column {
     max-width: 60%;
     margin: 1em auto;
   }
 }
 @media screen and (min-width: 1824px) {
-  .ticket-form form .pricing .column {
+  section form .pricing .column {
     padding: 1.2em 1.5em;
   }
 }
-.ticket-form form .pricing .column:hover {
+section form .pricing .column:hover {
   box-shadow: 0 0 0 1px color(rgb(176, 33, 33) a(64%));
 }
-.ticket-form form .pricing .column:active {
+section form .pricing .column:active {
   box-shadow: 0 0 0 1px rgb(176, 33, 33);
 }
-.ticket-form form .pricing .column.selected {
+section form .pricing .column.selected {
   box-shadow: 0 0 0 2px rgb(176, 33, 33);
 }
-.ticket-form form .pricing .column .info {
+section form .pricing .column .info {
   opacity: 0.5;
   transition: all 0.1s 0.1s linear;
 }
-.ticket-form form .pricing .column .info.selected {
+section form .pricing .column .info.selected {
   opacity: 1;
 }
-.ticket-form form .pricing .column .info .features {
+section form .pricing .column .info .features {
   margin: 2em 0 0.5em 0;
 }
-.ticket-form form .pricing .column .info .features h5 {
+section form .pricing .column .info .features h5 {
   padding: 0.2em 0em 0.2em 0;
   text-align: left;
 }
-.ticket-form form .pricing .column .select-btn {
+section form .pricing .column .select-btn {
   margin-top: 1em;
   padding: 4pt 10pt;
   background-color: transparent;
   border: 1px solid #b7b7b7;
   border-radius: 2px;
 }
-.ticket-form form .pricing .column .select-btn:hover {
+section form .pricing .column .select-btn:hover {
   border: 1px solid rgb(176, 36, 36);
 }
-.ticket-form form .action button {
+section form .action button {
   margin-top: 3em;
   width: 100%;
   border: none;
@@ -179,21 +141,21 @@ body {
   outline: 0;
   transition: all 0.3s;
 }
-.ticket-form form .action button:hover {
+section form .action button:hover {
   background-color: rgb(176, 36, 36);
   color: #e8e9ec;
 }
-.ticket-form form .action button:nth-child(2) {
+section form .action button:nth-child(2) {
   background: #552d2d;
   color: #fff;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 4px;
 }
-.ticket-form form .action button:nth-child(2):hover {
+section form .action button:nth-child(2):hover {
   background: #6d3c3c;
 }
 @media screen and (min-width: 768px) {
-  .ticket-form form .action button {
+  section form .action button {
     padding: 1em;
     font-size: 14pt;
   }

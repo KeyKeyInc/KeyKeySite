@@ -33,7 +33,7 @@ body {
     }    
 }
 
-.ticket-form {
+section {
     background-color: rgb(33, 33, 33);
 
     form {
@@ -57,55 +57,7 @@ body {
                 margin-left: 3em;
                 font-size: 20pt;
             }
-        }
-    
-        .content {
-            margin-bottom: 0.7em;
-            margin-left: 0.5em;
-            padding: 1em;
-            text-align: center;
-
-            @media screen and (min-width: 1024px) {
-                margin-bottom: 1.7em;
-                margin-left: 5em; 
-            }
-    
-            .input-field {
-                padding: 0.3em 0.2em;
-                flex-direction: row;
-
-                input {
-                    font-size: 14.5pt;
-                    display: block;
-                    padding: 0.2em 0.1em;
-                    border: 0;
-                    border-bottom: 0.5pt solid #747474;
-                    outline: none;
-                    transition: all .2s;
-                    background-color: rgb(33, 33, 33);
-    
-                    &:focus {
-                        border-color: #222;
-                    }
-                }   
-                
-                &.name {
-                    input {
-                        width: 70%;
-                    }
-                }
-                &.class {
-                    input {
-                        width: 30%;
-                    }
-                }
-                &.section {
-                    input {
-                        width: 30%;
-                    }
-                }
-            }
-        }
+        }       
 
         .pricing {
             margin: 1em auto;

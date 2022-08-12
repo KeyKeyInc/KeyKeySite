@@ -1,5 +1,5 @@
 
-const form = document.querySelector('.ticket-form');
+const form = document.querySelector('section');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();

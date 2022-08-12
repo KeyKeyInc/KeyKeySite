@@ -164,6 +164,27 @@ section .subtitle {
     font-size: 18pt;
   }
 }
+section .register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11pt;
+}
+@media screen and (min-width: 768px) {
+  section .register {
+    font-size: 14pt;
+  }
+}
+section .register span {
+  padding: 0.5em;
+  color: rgb(121, 121, 121);
+}
+section .register a {
+  color: rgb(180, 23, 23);
+}
+section .register a:hover {
+  color: rgb(251, 251, 251);
+}
 section .ticket-btn {
   display: flex;
   justify-content: center;
