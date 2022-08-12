@@ -30,11 +30,12 @@ section .main-info div p {
   color: rgb(177, 177, 177);
 }
 section .main-info .p-1 p {
-  text-align: left;
+  text-decoration: underline;
+  text-align: center;
   font-size: 16pt;
 }
 section .main-info .p-2 p {
-  text-align: right;
+  text-align: left;
   font-size: 14pt;
 }
 section .main-info .return-btn button {
