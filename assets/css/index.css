@@ -1,14 +1,15 @@
-* {
+:root, * {
   margin: 0;
   padding: 0;
   font-family: "DM Sans", sans-serif;
-  background-color: rgb(33, 33, 33);
   color: white;
   overflow-x: hidden;
 }
 
 body {
   font-size: 14pt;
+  background-color: rgb(33, 33, 33);
+  height: 100vh;
 }
 body hr {
   margin: 0 auto;
@@ -71,7 +72,9 @@ nav .burger {
   display: block;
   width: 23pt;
   cursor: pointer;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: none;
   outline: none;
   border: none;
