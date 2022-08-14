@@ -1,10 +1,10 @@
 <?php
 $config = [
     'db_engine' => 'mysql',
-    'db_host' => 'sql101.epizy.com',
-    'db_name' => 'epiz_32378281_keykey',
-    'db_user' => 'epiz_32378281',
-    'db_password' => 'jAS9d6jDvn2',
+    'db_host' => 'localhost',
+    'db_name' => 'keykey',
+    'db_user' => 'root',
+    'db_password' => '',
 ];
 
 $db_config = $config['db_engine'] . ":host=".$config['db_host'] . ";dbname=" . $config['db_name'];

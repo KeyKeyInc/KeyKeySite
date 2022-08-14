@@ -1,11 +1,5 @@
 
-const form = document.querySelector('section');
-
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    return false;
-});
-
+// Aggiunta della classe e cambio colore della selezione prezzi
 window.onload = function() {
     var columns = document.querySelectorAll('.column');
     var info = document.querySelectorAll('.info')

@@ -72,9 +72,7 @@ nav .burger {
   display: block;
   width: 23pt;
   cursor: pointer;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   background: none;
   outline: none;
   border: none;
