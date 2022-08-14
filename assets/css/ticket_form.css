@@ -116,15 +116,31 @@ section form .pricing .column .info .features h5 {
   padding: 0.2em 0em 0.2em 0;
   text-align: left;
 }
-section form .pricing .column .select-btn {
-  margin-top: 1em;
-  padding: 4pt 10pt;
-  background-color: transparent;
-  border: 1px solid #b7b7b7;
-  border-radius: 2px;
+section form .pricing .column label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5em;
+  pointer-events: none;
 }
-section form .pricing .column .select-btn:hover {
-  border: 1px solid rgb(176, 36, 36);
+section form .pricing .column label:hover {
+  cursor: pointer;
+}
+section form .pricing .column label.container input {
+  display: none;
+  cursor: pointer;
+}
+section form .pricing .column label.container input:checked ~ .checkmark {
+  background-color: rgb(176, 33, 33);
+}
+section form .pricing .column label.container .checkmark {
+  height: 11pt;
+  width: 11pt;
+  background-color: #eee;
+  border-radius: 3%;
+}
+section form .pricing .column label.container .checkmark:hover {
+  background-color: rgb(176, 36, 36);
 }
 section form .action button {
   margin-top: 3em;

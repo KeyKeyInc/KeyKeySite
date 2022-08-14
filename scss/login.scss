@@ -139,4 +139,11 @@ section {
             }
         }
     }
+    
+    .err-msg {
+        display: flex;
+        justify-content: center;
+        font-size: 11pt;
+        color: rgb(176, 36, 36);
+    }
 }

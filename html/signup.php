@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -25,20 +25,20 @@
 			
 			<div class="content">
 				<div class="input-field name">
-					<input type="username" placeholder="Name" name="username" id="username" required>
+					<input type="username" placeholder="Name" name="username" id="username" autocomplete="off" required>
 				</div>
 				<div class="input-field class">
-					<input type="text" placeholder="Class" name="class" id="class" required>
+					<input type="text" placeholder="Class" name="class" id="class" autocomplete="off" required>
 				</div>
 				<div class="input-field section">
-					<input type="text" placeholder="Section" name="section" id="section" required>
+					<input type="text" placeholder="Section" name="section" id="section" autocomplete="off" required>
 				</div>
 			</div>
 
 			<div class="err-msg">
 				<!-- PHP code -->
 				<?php
-				require_once('../database/database.php');
+				require_once('../database/config.php');
 
 				if (isset($_POST['register'])) {
 					$username = $_POST['username'] ?? '';
@@ -49,7 +49,7 @@
 						$username,
 						FILTER_VALIDATE_REGEXP, [
 							"options" => [
-								"regexp" => "/^[a-z\d_]{3,20}$/i"
+								"regexp" => "/^[a-z\d_]{4,20}$/i"
 							]
 						]
 					);
@@ -80,38 +80,22 @@
 						$msg = 'Invalid Class...';
 					} elseif ($isSectionValid === false) {
 						$msg = 'Invalid Section...';
-					} else {
+					} else {					
 						$query = "
-							SELECT id
-							FROM requests
-							WHERE username = :username
+							INSERT INTO requests
+							VALUES (0, :username, :class, :section)
 						";
-						
+					
 						$check = $pdo->prepare($query);
 						$check->bindParam(':username', $username, PDO::PARAM_STR);
+						$check->bindParam(':class', $class, PDO::PARAM_STR);
+						$check->bindParam(':section', $section, PDO::PARAM_STR);
 						$check->execute();
 						
-						$user = $check->fetchAll(PDO::FETCH_ASSOC);
-						
-						if (count($user) > 0) {
-							$msg = 'This username is already registered.';
+						if ($check->rowCount() > 0) {
+							$msg = '<script>window.location.href="../html/request_success.html"</script>';
 						} else {
-							$query = "
-								INSERT INTO requests
-								VALUES (0, :username, :class, :section)
-							";
-						
-							$check = $pdo->prepare($query);
-							$check->bindParam(':username', $username, PDO::PARAM_STR);
-							$check->bindParam(':class', $class, PDO::PARAM_STR);
-							$check->bindParam(':section', $section, PDO::PARAM_STR);
-							$check->execute();
-							
-							if ($check->rowCount() > 0) {
-								$msg = '<script>window.location.href="../html/request_success.html"</script>';
-							} else {
-								$msg = 'Data pull failed.';
-							}
+							$msg = 'Data pull failed.';
 						}
 					}	
 					echo "Error: *";		

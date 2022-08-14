@@ -119,17 +119,39 @@ section {
                     }                    
                 }
 
-                .select-btn {
-                    margin-top: 1em;
-                    padding: 4pt 10pt;
-                    background-color: transparent;
-                    border: 1px solid #b7b7b7;
-                    border-radius: 2px;
+                label {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 1.5em;
+                    pointer-events: none;
 
                     &:hover {
-                        border: 1px solid rgb(176, 36, 36);
+                        cursor: pointer;
                     }
-                }
+
+                    &.container {
+                        input {
+                            display: none;
+                            cursor: pointer;
+
+                            &:checked ~ .checkmark {
+                                background-color: rgb(176, 33, 33);
+                            }
+                        }
+
+                        .checkmark {
+                            height: 11pt;
+                            width: 11pt;
+                            background-color: #eee;
+                            border-radius: 3%;
+
+                            &:hover {
+                                background-color: rgb(176, 36, 36);
+                            }
+                        }
+                    }
+                }               
             }
         }
 

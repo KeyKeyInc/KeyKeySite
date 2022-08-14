@@ -1,5 +1,5 @@
 <?php
-require_once('database.php');
+require_once('../../database/config.php');
 
 if (isset($_POST['register'])) {
     $username = $_POST['username'] ?? '';
@@ -61,3 +61,4 @@ if (isset($_POST['register'])) {
     
     printf($msg, '');
 }
+?>

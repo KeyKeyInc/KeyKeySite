@@ -123,4 +123,10 @@ section form .action button:nth-child(2):hover {
     padding: 1em;
     font-size: 14pt;
   }
+}
+section .err-msg {
+  display: flex;
+  justify-content: center;
+  font-size: 11pt;
+  color: rgb(176, 36, 36);
 }/*# sourceMappingURL=login.css.map */
