@@ -36,12 +36,12 @@ section form .logo img, section form a img {
 }
 @media screen and (min-width: 768px) {
   section form .logo img, section form a img {
-    max-width: 60%;
+    max-width: 55%;
   }
 }
 @media screen and (min-width: 1024px) {
   section form .logo img, section form a img {
-    max-width: 80%;
+    max-width: 70%;
   }
 }
 section form h1 {
