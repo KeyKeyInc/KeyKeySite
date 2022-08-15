@@ -23,12 +23,12 @@ body {
 }
 @media screen and (min-width: 768px) {
   .logo img, a img {
-    max-width: 60%;
+    max-width: 55%;
   }
 }
 @media screen and (min-width: 1024px) {
   .logo img, a img {
-    max-width: 80%;
+    max-width: 70%;
   }
 }
 

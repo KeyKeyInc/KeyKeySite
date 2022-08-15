@@ -32,7 +32,7 @@ section form .logo img, section form a img {
   margin-top: 2em;
   margin-bottom: 1em;
   height: auto;
-  max-width: 55%;
+  max-width: 50%;
 }
 @media screen and (min-width: 768px) {
   section form .logo img, section form a img {
