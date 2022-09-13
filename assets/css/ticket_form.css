@@ -142,6 +142,44 @@ section form .pricing .column label.container .checkmark {
 section form .pricing .column label.container .checkmark:hover {
   background-color: rgb(176, 36, 36);
 }
+section form .id-box {
+  margin-bottom: 0.7em;
+  margin-left: 0.5em;
+  padding: 1em;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  section form .id-box {
+    margin-bottom: 0.5em;
+    margin-left: 4em;
+  }
+}
+section form .id-box .input-field {
+  padding: 0.3em 0.2em;
+  flex-direction: row;
+}
+section form .id-box .input-field input {
+  font-size: 14.5pt;
+  display: block;
+  padding: 0.2em 0.1em;
+  border: 0;
+  border-bottom: 0.5pt solid #747474;
+  outline: none;
+  transition: all 0.2s;
+  background-color: rgb(33, 33, 33);
+}
+section form .id-box .input-field input:focus {
+  border-color: #222;
+}
+section form .id-box .input-field.name input {
+  width: 70%;
+}
+section form .id-box .input-field.class input {
+  width: 30%;
+}
+section form .id-box .input-field.section input {
+  width: 30%;
+}
 section form .action button {
   margin-top: 3em;
   width: 100%;

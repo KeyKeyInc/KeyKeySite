@@ -17,12 +17,22 @@ $ticketbody = <<<HTML
 <body>
 	<!-- Main Section -->
 	<section>
-		<form method="post" action="">
+		<form method="post" action="./ticket_submission.php">
 			<!-- Central Logo -->
 			<div class="logo">
 				<a href="../index.html" target="_self">
 					<img src="../assets/imgs/logo.png" alt="">
 				</a>
+			</div>
+
+			<!-- User id chekc -->
+			<h1>User Verification</h1> 
+
+			<!-- ID input box -->
+			<div class="id-box">
+				<div class="input-field id">
+					<input type="username" placeholder="User Id" name="user" id="user" autocomplete="off" required>
+				</div>
 			</div>
 
 			<!-- Plan Choice -->
@@ -40,7 +50,7 @@ $ticketbody = <<<HTML
 					
 						<!-- CheckBox -->
 						<label class="container"> Select
-							<input type="radio" name="radio">
+							<input type="radio" name="radio" value="5">
 							<span class="checkmark"></span>
 						</label>
 					</div>
@@ -51,12 +61,12 @@ $ticketbody = <<<HTML
 						<h4>&euro; 5</h4>
 						<div class="features">
 							<h5><li>1 Refill</li></h5>
-							<h5><li>11&euro; credit on the stick</li></h5>
+							<h5><li>10&euro; credit on the stick</li></h5>
 						</div>
 					
 						<!-- CheckBox -->
 						<label class="container"> Select
-							<input type="radio" name="radio">
+							<input type="radio" name="radio" value="10">
 							<span class="checkmark"></span>
 						</label>
 					</div>
@@ -72,7 +82,7 @@ $ticketbody = <<<HTML
 					
 						<!-- CheckBox -->
 						<label class="container"> Select
-							<input type="radio" name="radio">
+							<input type="radio" name="radio" value="20">
 							<span class="checkmark"></span>
 						</label>
 					</div>
